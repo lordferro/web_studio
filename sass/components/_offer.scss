@@ -1,0 +1,36 @@
+  .offer__list {
+    display: flex;
+  }
+  
+  .offer__item {
+    margin-left: 30px;
+  }
+  
+  .offer__item {
+    &:first-child {
+        margin-left: 0;
+      }
+  }
+  
+  .offer__item {
+    position: relative;
+  }
+  
+  .offer__text {
+    position: absolute;
+    bottom: 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+  
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $white-color;
+  }

@@ -1,0 +1,30 @@
+.social-networks {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-networks__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-networks__link,
+  .social-networks__icon {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .social-networks__item {
+    margin-left: 10px;
+  }
+  
+  .social-networks__item {
+    &:first-child {
+        margin-left: 0;
+      }
+  }
