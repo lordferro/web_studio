@@ -179,10 +179,15 @@
   .modal__license-icon2 {
     .modal__license-checkbox:checked + .modal__license-label & {
       opacity: 1;
-    }
-    
+    }       
   }
   
+  .modal__license-icon {
+    .modal__license-checkbox:focus + .modal__license-label & {
+      fill: $accent-color;
+    } 
+  }
+
   .modal__license-label {
     display: flex;
     align-items: center;

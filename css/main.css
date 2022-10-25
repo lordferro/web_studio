@@ -647,6 +647,10 @@ body {
   opacity: 1;
 }
 
+.modal__license-checkbox:focus + .modal__license-label .modal__license-icon {
+  fill: #2196f3;
+}
+
 .modal__license-label {
   display: flex;
   align-items: center;
