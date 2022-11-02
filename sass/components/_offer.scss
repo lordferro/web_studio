@@ -1,14 +1,20 @@
+  @media screen and (max-width: $tablet) {
+    .section__offer {
+      display: none;
+    }
+  }
+  
   .offer__list {
-    display: flex;
+    // display: flex;
   }
   
   .offer__item {
-    margin-left: 30px;
+    // margin-left: 30px;
   }
   
   .offer__item {
     &:first-child {
-        margin-left: 0;
+        // margin-left: 0;
       }
   }
   
@@ -20,11 +26,11 @@
     position: absolute;
     bottom: 0;
   
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-    width: 100%;
+    // width: 100%;
   
     font-weight: 700;
     font-size: 14px;

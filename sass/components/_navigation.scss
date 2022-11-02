@@ -11,7 +11,7 @@
   .main-nav__list {
     display: flex;
   
-    margin-left: 93px;
+    margin-left: 87px;
   }
   
   .main-nav__item {
@@ -56,17 +56,22 @@
   
   .contacts {
     display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     margin-left: auto;
+
+    gap: 10px;
   }
   
   .contacts__item {
-    margin-left: 50px;
+    
   }
   
   .contacts__item {
-    &:first-child {
-      margin-left: 0;
-    }
+    
+    // &:not(:first-child) {
+    //   margin-left: 50px;
+    // }
   }
   
   .contacts__link {

@@ -24,8 +24,12 @@ body.modal-open {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+   padding-top: 60px;
+   padding-bottom: 60px;
+}
+
+.section__no-padding {
+  padding-top: 0;
 }
 
 .list {
@@ -54,12 +58,21 @@ body.modal-open {
   color: $title-color;
 }
 
-.container {
-  width: 1200px;
+.container {  
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 
 .offer__title,
@@ -93,6 +106,3 @@ body.modal-open {
   background-color: $background-filter-buttons;
 }
 
-.section__no-padding {
-  padding-top: 0;
-}

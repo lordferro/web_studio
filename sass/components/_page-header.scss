@@ -1,8 +1,26 @@
 .page-header {
     border-bottom: 1px solid $logo-border-color;
   }
-  
+
+.page-header__container--mobile { 
+  display: flex;
+  align-items: center;      
+  justify-content: space-between;
+
+  height: 60px;  
+
+}
+
+.page-header__container {
+  display: none;
+}
+
+@media screen and (min-width: $tablet) {
+  .page-header__container--mobile {
+    display: none;
+  }
   .page-header__container {
     display: flex;
-    align-items: center;
   }
+  
+}
