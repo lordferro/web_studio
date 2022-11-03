@@ -1,4 +1,5 @@
-.main-nav {
+@media screen and (min-width: $tablet) {
+  .main-nav {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -58,21 +59,14 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    margin-left: auto;
+    margin-left: 96px;
 
     gap: 10px;
   }
   
   .contacts__item {
     
-  }
-  
-  .contacts__item {
-    
-    // &:not(:first-child) {
-    //   margin-left: 50px;
-    // }
-  }
+  }  
   
   .contacts__link {
     color: $primary-text-color;
@@ -110,3 +104,17 @@
     fill: $accent-color;
     }
   }
+}
+
+@media screen and (min-width: $desktop) {
+  .contacts {
+    margin-left: auto;
+  }
+
+  .contacts__item {
+    
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+}
