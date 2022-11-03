@@ -1,10 +1,11 @@
 .clients__list {
-    // display: flex;
-    // justify-content: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
   }
   
-  .clients__link {
-    width: 170px;
+  .clients__link {    
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
@@ -21,14 +22,15 @@
   }
   
   .clients__item {
-    // margin-left: 30px;
-  }
-  
-  .clients__item {
-    &:first-child {
-        // margin-left: 0;
-      }
-  }
+    width: calc((100% - 30px) / 2);
+
+    @media screen and (min-width: $tablet) { 
+      width: calc((100% - 60px) / 3);
+      }   
+      @media screen and (min-width: $desktop) { 
+       width: calc((100% - 150px) / 6);
+        }  
+  } 
   
   .clients__icon {
     .clients__link:hover &,

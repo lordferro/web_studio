@@ -1,5 +1,8 @@
 .features__list {
-    // display: flex;
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
   }
   
   .features__title {
@@ -7,9 +10,10 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    text-align: center;
   
-    // margin-top: 30px;
-    // margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
   
   .features__icon-thumb {
@@ -18,19 +22,32 @@
     align-items: center;
   
     background-color: $background-filter-buttons;
-    width: 270px;
+    
+    
     height: 120px;
+
+    @media screen and (min-width: $tablet) {
+   
+      height: 140px;     
+    }
+
+    @media screen and (min-width: $desktop) {
+   
+      height: 120px;     
+    }
+
   }
   
-  .features__item {
-    // margin-left: 30px;
+  .features__item {   
+    width: 100%;
+    @media screen and (min-width: $tablet) { 
+    width: calc((100% - 30px) / 2);
+    }   
+    @media screen and (min-width: $desktop) { 
+     width: calc((100% - 90px) / 4);
+      }  
   }
-  
-  .features__item {
-    &:first-child {
-        // margin-left: 0;
-      }
-  }
+
   
   .features__text {
     font-size: 14px;

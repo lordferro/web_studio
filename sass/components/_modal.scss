@@ -1,14 +1,25 @@
 .modal {
-    @media screen and (min-width: $mobile) {
+ 
+  @media screen and (max-width: $mobile) {
+    max-width: 450px;
+  }
          position: absolute;
          top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
   
   
-    max-width: 450px;
+    
     height: 609px;
+    
+    @media screen and (min-width: $tablet) {
+      width: 450px;
     }
+
+    @media screen and (min-width: $desktop) {
+      width: 528px;
+    }
+    
 
 
     padding: 40px;
@@ -23,6 +34,10 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 1.5;
+
+    @media screen and (min-width: $desktop) {
+      line-height: 1.15;
+    }
   
     color: $black-color;
   
@@ -60,6 +75,11 @@
   
   .modal__form {
     width: 370px;
+
+    @media screen and (min-width: $desktop) {
+      width: 448px
+    }
+
     margin-bottom: 20px;
   }
   
@@ -143,6 +163,10 @@
     margin-bottom: 30px;
     padding-right: 11px;
     padding-left: 24px;
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 36px;
+    }
   }
   
   .modal__license-checkbox {
@@ -170,10 +194,21 @@
     left: 0;
   
     cursor: pointer;
-  
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  
+
+    @media screen and (min-width: $desktop) {
+      .modal__license-icon {        
+        left: 12px;       
+      }
+      
+      .modal__license-icon2 {       
+        left: 12px;         
+    }
+  }
+
   
   .modal__license-icon2 {
     .modal__license-checkbox:checked + .modal__license-label & {
@@ -193,6 +228,11 @@
   
     font-size: 12px;
     line-height: 1.16;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
   
   .modal__license-condition {
