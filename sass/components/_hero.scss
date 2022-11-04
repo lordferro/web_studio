@@ -1,6 +1,9 @@
 .hero {
-  width: 480px;
+  @media screen and (min-width: $mobile) {
+    width: 480px;
+  }
   height: 400px;
+  padding:  118px 0px;
 
   background-image: linear-gradient(
       to right,
@@ -8,7 +11,9 @@
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/hero_mobile.jpg);
-  background-size: 480px 400px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -74,16 +79,15 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 118px;
 
-  @media screen and (min-width: $desktop) {
+  @include desktop {
     padding-top: 200px;
   }
 }
 
 .hero__title {
   color: $white-color;
-
+  font-size: 20px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -93,7 +97,12 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 360px;
+
+  @include mobile {
+    width: 360px;
+    font-size: 26px;
+  }
+  
 
   @media screen and (min-width: $desktop) {
     font-size: 44px;

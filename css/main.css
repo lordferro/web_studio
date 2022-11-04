@@ -303,6 +303,7 @@ body.modal-open {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  width: 100vw;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -411,25 +412,41 @@ body.modal-open {
     width: 100vw;
     height: 100vh;
     z-index: 10;
-    padding: 48px 0 48px 40px;
+    padding: 38px 0 88px 30px;
     background: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     overflow-y: scroll;
   }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .mobile-menu__container {
+    padding: 48px 0 48px 40px;
+  }
+}
+@media screen and (max-width: 767px) {
   .mobile-open,
 .mobile-close {
     border: none;
     background-color: transparent;
   }
+}
+@media screen and (max-width: 767px) {
   .social-links {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: #2196f3;
     gap: 10px;
     display: inline-flex;
   }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .social-links {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
   .social-links__item:not(:last-child) {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     padding-right: 10px;
@@ -488,19 +505,35 @@ body.modal-open {
     margin-bottom: 32px;
   }
   .contacts__item:last-child {
+    margin-bottom: 44px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .contacts__item:last-child {
     margin-bottom: 64px;
   }
+}
+@media screen and (max-width: 768px) {
   .contacts__link {
     color: #757575;
     text-decoration: none;
     font-weight: 500;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.17;
     letter-spacing: 0.02em;
   }
+}
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .contacts__link {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 768px) {
   .contacts__link--accent {
     color: #2196f3;
   }
+}
+@media screen and (max-width: 768px) {
   .contacts__icon {
     display: none;
   }
@@ -605,15 +638,21 @@ body.modal-open {
   }
 }
 .hero {
-  width: 480px;
   height: 400px;
+  padding: 118px 0px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero_mobile.jpg);
-  background-size: 480px 400px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #c4c4c4;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 118px;
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    width: 480px;
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -655,6 +694,7 @@ body.modal-open {
 
 .hero__title {
   color: #ffffff;
+  font-size: 20px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -663,7 +703,12 @@ body.modal-open {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 360px;
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+    font-size: 26px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {

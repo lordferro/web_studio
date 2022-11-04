@@ -36,7 +36,10 @@
   
   .contacts__item {
     &:last-child {
-      margin-bottom: 64px;
+      margin-bottom: 44px;
+      @media screen and (min-width: $mobile) {
+        margin-bottom: 64px;
+      }
     }
   }
   
@@ -46,9 +49,13 @@
     text-decoration: none;   
   
     font-weight: 500;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.17;
     letter-spacing: 0.02em;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 34px;
+    }
   }
 
   .contacts__link--accent {
