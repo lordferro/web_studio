@@ -9,9 +9,7 @@ p {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
-
-  width: 100%;
+  height: auto;  
 }
 
 body {
@@ -28,6 +26,11 @@ body.modal-open {
 .section {
    padding-top: 60px;
    padding-bottom: 60px;
+
+   @include desktop {
+    padding-top: 94px;
+   padding-bottom: 94px;
+   }
 }
 
 .section__no-padding {

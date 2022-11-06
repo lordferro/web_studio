@@ -30,17 +30,12 @@
   }
   
   .filter {
-    display: flex;
-    justify-content: center;
+    display: flex;    
     margin-bottom: 50px;
-  }
-  
-  .filter__item {
-    margin-left: 8px;
-  }
-  
-  .filter__item {
-    &:first-child {
-        margin-left: 0;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    @include tablet {
+      justify-content: center;
     }
   }
