@@ -10,10 +10,16 @@
   .main-nav__item {
     margin-bottom: 32px;
     &:last-child {
-      margin-bottom: 302px;
+      margin-bottom: 152px; //поднял margin так как в на своём мобильнике не вмещалось
     }
-  }
   
+    @media screen and (min-width: 420px) {
+      &:last-child {
+        margin-bottom: 302px;
+      }
+    } 
+  }
+
   .main-nav__link {
     display: block;   
   
@@ -37,9 +43,9 @@
   .contacts__item {
     &:last-child {
       margin-bottom: 44px;
-      @media screen and (min-width: $mobile) {
-        margin-bottom: 64px;
-      }
+      @media screen and (min-width: 420px) {       
+        margin-bottom: 64px;      
+      } 
     }
   }
   

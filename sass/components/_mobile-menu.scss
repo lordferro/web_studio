@@ -10,7 +10,7 @@
     height: 100vh;
     z-index: 10;
   
-    padding: 38px 0 88px 30px;
+    padding: 38px 0 88px 30px; //поднял паддингом так как в новом Safari адресная строка снизу перекрывает
 
     @media screen and (min-width: $mobile) {
       padding: 48px 0 48px 40px;

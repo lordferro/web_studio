@@ -56,20 +56,14 @@
   }
 
   .contacts-thumb {
-    width: 138px;
-
     margin-left: auto;
 
     display: flex;    
-    align-content: center;
+    align-items: center;
   }
   
-  .contacts {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    
-    gap: 10px;
+  .contacts__item:first-child {
+    margin-bottom: 10px;
   }
 
   .contacts__link {
@@ -116,9 +110,17 @@
 }
 
 @media screen and (min-width: $desktop) {
+  .contacts {
+    
+    display: flex;
+   
+   
+  }
 
   .contacts__item {
-    
+    &:first-child {
+      margin-bottom: 0px;
+    }
     &:not(:first-child) {
       margin-left: 30px;
     }

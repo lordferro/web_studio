@@ -66,6 +66,7 @@ body.modal-open {
   padding-left: 15px;
   padding-right: 15px;
   width: 100vw;
+  min-width: 320px;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
