@@ -398,6 +398,14 @@ body.modal-open {
   font-size: 24px;
   line-height: 1.16;
   text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 
 .logo--black {
@@ -624,6 +632,14 @@ body.modal-open {
     line-height: 1.14;
   }
 }
+@media screen and (min-width: 768px) and (min-width: 767px) and (max-width: 1199px) {
+  .contacts__link--bottom {
+    padding-bottom: 20px;
+  }
+  .contacts__link--top {
+    padding-top: 20px;
+  }
+}
 @media screen and (min-width: 768px) {
   .contacts__icon {
     fill: currentColor;
@@ -662,7 +678,7 @@ body.modal-open {
   height: 400px;
   padding: 118px 0px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero_mobile.jpg);
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #c4c4c4;
@@ -760,9 +776,11 @@ body.modal-open {
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+  text-align: center;
 }
 
 .backdrop.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -781,6 +799,7 @@ body.modal-open {
 @media screen and (max-width: 480px) {
   .modal {
     max-width: 450px;
+    width: 96%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -832,8 +851,13 @@ body.modal-open {
 }
 
 .modal__form {
-  width: 370px;
+  width: 100%;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .modal__form {
+    width: 370px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal__form {
@@ -997,14 +1021,19 @@ body.modal-open {
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 30px;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
 .features__icon-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
   background-color: #f5f4fa;
   height: 120px;
 }
@@ -1209,13 +1238,19 @@ body.modal-open {
 
 .filter {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   gap: 8px;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .filter {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
   }
 }
 
@@ -1241,15 +1276,20 @@ body.modal-open {
 }
 
 .product__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
 }
 
+.product__link {
+  height: 100%;
+}
 .product__link:hover, .product__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .product__description {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
@@ -1280,13 +1320,14 @@ body.modal-open {
   height: 100%;
   font-size: 18px;
   line-height: 1.55;
+  overflow-y: auto;
   padding: 63px 24px;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.product__item:hover .product__text, .product__item:focus .product__text {
+.product__link:hover .product__text, .product__link:focus .product__text {
   top: 0;
 }
 
@@ -1301,12 +1342,6 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer {
-    padding-left: 76px;
-    padding-right: 89px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .footer {
     display: flex;
@@ -1314,12 +1349,22 @@ body.modal-open {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .logo-join-thumb {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .logo-join-thumb {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+}
 @media screen and (min-width: 768px) {
   .logo-join-thumb {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    margin-bottom: 60px;
   }
 }
 
@@ -1344,6 +1389,11 @@ body.modal-open {
   .address__list {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo-thumb {
     margin-bottom: 60px;
   }
 }
@@ -1361,16 +1411,11 @@ body.modal-open {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-contact:hover, .footer-contact:focus {
+.footer__contact:hover, .footer__contact:focus {
   color: #2196f3;
   fill: #2196f3;
 }
 
-@media screen and (max-width: 767px) {
-  .join {
-    margin-bottom: 60px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .join {
     margin-left: 70px;
@@ -1423,7 +1468,7 @@ body.modal-open {
 .subscribe__input {
   display: block;
   padding-left: 16px;
-  width: 450px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -1442,14 +1487,9 @@ body.modal-open {
 .subscribe__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (max-width: 470px) {
+@media screen and (min-width: 480px) {
   .subscribe__input {
-    width: 380px;
-  }
-}
-@media screen and (max-width: 420px) {
-  .subscribe__input {
-    width: 320px;
+    width: 450px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -1469,14 +1509,13 @@ body.modal-open {
 .subscribe-button {
   width: 200px;
   height: 50px;
-  position: relative;
-  padding: 10px 62px 10px 28px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 28px 10px 28px;
+  display: flex;
 }
 
 .subscribe__icon {
-  position: absolute;
   margin-left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   pointer-events: none;
 }/*# sourceMappingURL=main.css.map */

@@ -31,11 +31,15 @@
   
   .filter {
     display: flex;    
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     gap: 8px;
     flex-wrap: wrap;
 
     @include tablet {
       justify-content: center;
+      margin-bottom: 30px;
+    }
+    @include desktop {      
+      margin-bottom: 50px;
     }
   }

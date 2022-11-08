@@ -11,9 +11,9 @@
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/hero_mobile.jpg);
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; 
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),

@@ -9,10 +9,6 @@
 }
 
 .footer {  
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-left: 76px;
-    padding-right: 89px;
-  }
 
   @include desktop {
     display: flex;
@@ -21,12 +17,21 @@
 }
 
 .logo-join-thumb {
+ 
+  @media screen and (max-width: 1199px) {
+     margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+  
   @include tablet {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 
-    margin-bottom: 60px;
+    
   }
 }
 
@@ -51,7 +56,12 @@
 
   @media screen and (max-width: 767px) {
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
+  }
+}
+
+.logo-thumb {
+  @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
 }
@@ -72,7 +82,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-contact {
+.footer__contact {
   &:hover,
   &:focus {
     color: $accent-color;
@@ -81,9 +91,7 @@
 }
 
 .join {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
+
     @include desktop {
       margin-left: 70px;
     }
@@ -144,7 +152,7 @@
   
   padding-left: 16px;
 
-  width: 450px;
+  width: 100%;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -160,13 +168,9 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
-  @media screen and (max-width: 470px) {
-    width: 380px;
-  }
-
-  @media screen and (max-width: 420px) {
-    width: 320px;
-  }
+@include mobile {
+  width: 450px;
+}
 
   @media screen and (max-width: 1199px) {
     margin-left: auto;
@@ -183,16 +187,16 @@
 .subscribe-button {
   width: 200px;
   height: 50px;
+  margin-left: auto;
+  margin-right: auto;
 
-  position: relative;
+  padding: 10px 28px 10px 28px;
 
-  padding: 10px 62px 10px 28px;
+  display: flex;  
 }
 
-.subscribe__icon {
-  position: absolute;
+.subscribe__icon {  
   margin-left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  
   pointer-events: none;
 }

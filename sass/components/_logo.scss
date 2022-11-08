@@ -7,6 +7,14 @@
     line-height: 1.16;
   
     text-decoration: none;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include tablet {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
   }
   
   .logo--black {

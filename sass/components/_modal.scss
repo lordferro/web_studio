@@ -1,7 +1,9 @@
 .modal {
  
+ 
   @media screen and (max-width: $mobile) {
     max-width: 450px;
+    width: 96%;
   }
          position: absolute;
          top: 50%;
@@ -74,7 +76,11 @@
   }
   
   .modal__form {
-    width: 370px;
+    width: 100%;
+
+    @include mobile {
+      width: 370px;
+    }
 
     @media screen and (min-width: $desktop) {
       width: 448px
