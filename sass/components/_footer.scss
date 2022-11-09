@@ -38,6 +38,8 @@
 .footer__logo {
   display: block;
   margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .address__map {
@@ -66,8 +68,11 @@
   }
 }
 
-.address__item {
-  margin-top: 9px;
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+  @include tablet {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__contact {

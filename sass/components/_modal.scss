@@ -1,6 +1,5 @@
 .modal {
  
- 
   @media screen and (max-width: $mobile) {
     max-width: 450px;
     width: 96%;
@@ -20,6 +19,7 @@
 
     @media screen and (min-width: $desktop) {
       width: 528px;
+      height: 581px;
     }
     
 

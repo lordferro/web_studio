@@ -376,7 +376,6 @@ body.modal-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
 }
 
 .page-header__container {
@@ -810,6 +809,7 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
+    height: 581px;
   }
 }
 
@@ -1371,6 +1371,8 @@ body.modal-open {
 .footer__logo {
   display: block;
   margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .address__map {
@@ -1398,8 +1400,13 @@ body.modal-open {
   }
 }
 
-.address__item {
-  margin-top: 9px;
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__contact {
