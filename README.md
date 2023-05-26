@@ -1,2 +1,2 @@
 # web_studio
-Technologies used: HTML, CSS.
+Here is an example how i use: HTML, CSS.
